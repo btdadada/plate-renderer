@@ -1,4 +1,4 @@
-# plate-generator
+# plate-renderer
 
 > 纯前端车牌照片生成，目前支持小客车绿牌和蓝牌
 
@@ -18,12 +18,12 @@
 ## 📦 安装
 
 ```bash
-npm install plate-generator
+npm install plate-renderer
 ```
 
 ## 🪚 用法
 ```bash
-import { PlateRenderer } from 'plate-generator'
+import { PlateRenderer } from 'plate-renderer'
 PlateRenderer.create('京ADT0069', 'green', 'container')
 ```
 
