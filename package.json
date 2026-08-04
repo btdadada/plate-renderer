@@ -1,5 +1,5 @@
 {
-  "name": "plate-generator",
+  "name": "plate-renderer",
   "version": "0.0.3",
   "type": "module",
   "module": "./dist/index.js",
