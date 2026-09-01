@@ -6,19 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>plate-generator</title>
     <style>
-      #app {
-        width: 171px;
-        height: 50px;
+      .selector {
+        margin-bottom: 10px;
       }
-
-      #app2 {
-        width: 157px;
-        height: 50px;
-        margin-top: 10px;
+      .selector input,
+      .selector select {
+        padding: 10px;
+      }
+      #app {
+        width: 170px;
       }
     </style>
   </head>
   <body>
+    <div class="selector">
+      <input type="text" placeholder="车牌号" id="input">
+      <select id="select">
+        <option value="blue">蓝牌</option>
+        <option value="green">绿牌</option>
+      </select>
+    </div>
     <div id="app"></div>
     <div id="app2"></div>
     <script type="module" src="/src/main.ts"></script>

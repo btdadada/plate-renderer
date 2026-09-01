@@ -1,5 +1,6 @@
 import { platesInfo, type Colors } from './config/platesInfo'
 import { keyBlackToAlpha, hexToRgb } from './utils/imageProcess'
+import { clearChild } from './utils/dom'
 
 export class PlateRenderer {
   element: HTMLElement
@@ -30,6 +31,7 @@ export class PlateRenderer {
     const canvas = document.createElement('canvas')
     const canvasWidth = element.offsetWidth
     const canvasHeight = canvasWidth / plateInfo.aspectRatio
+
     canvas.width = canvasWidth
     canvas.height = canvasHeight
     const ctx = canvas.getContext('2d')
@@ -38,6 +40,7 @@ export class PlateRenderer {
     img.src = plateImageModule.default
     img.onload = function() {
       ctx?.drawImage(img, 0, 0, canvasWidth, canvasHeight)
+      clearChild(element)
       element.appendChild(canvas)
     }
 
