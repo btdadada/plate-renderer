@@ -1,4 +1,5 @@
 interface PlateInfo {
+  aspectRatio: number
   plateImage: string
   fontColor: string
   fonts: Array<{
@@ -13,6 +14,7 @@ type PlatesInfo = Record<Colors, PlateInfo>
 
 export const platesInfo: PlatesInfo = {
   green: {
+    aspectRatio: 3.43,
     plateImage: 'green',
     fontColor: '#000000',
     fonts: [
@@ -67,6 +69,7 @@ export const platesInfo: PlatesInfo = {
     ]
   },
   blue: {
+    aspectRatio: 3.14,
     plateImage: 'blue',
     fontColor: '#ffffff',
     fonts: [

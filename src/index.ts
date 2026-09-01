@@ -25,10 +25,11 @@ export class PlateRenderer {
 
   static async create(plateNumber: string, plateColor: Colors, el: string | HTMLElement) {
     const plateRenderer = new PlateRenderer(plateNumber, plateColor, el)
+    const plateInfo = platesInfo[plateColor]
     const element = plateRenderer.element
     const canvas = document.createElement('canvas')
     const canvasWidth = element.offsetWidth
-    const canvasHeight = canvasWidth * 0.2915
+    const canvasHeight = canvasWidth / plateInfo.aspectRatio
     canvas.width = canvasWidth
     canvas.height = canvasHeight
     const ctx = canvas.getContext('2d')
@@ -39,8 +40,6 @@ export class PlateRenderer {
       ctx?.drawImage(img, 0, 0, canvasWidth, canvasHeight)
       element.appendChild(canvas)
     }
-
-    const plateInfo = platesInfo[plateColor]
 
     ;[...plateNumber].forEach(async (char, index) => {
       //单个字符信息
