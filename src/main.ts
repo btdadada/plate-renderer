@@ -30,3 +30,6 @@ input.addEventListener('input', () => {
   if (isComposing) return
   generate()
 });
+
+input.value = '津A888888'
+generate()
