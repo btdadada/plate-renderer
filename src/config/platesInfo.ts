@@ -75,44 +75,44 @@ export const platesInfo: PlatesInfo = {
     fonts: [
       {
         "width": 0.1042,
-        "height": 0.7,
+        "height": 0.68,
         "left": 0.0357,
         "top": 0.16
       },
       {
         "width": 0.1042,
-        "height": 0.7,
+        "height": 0.68,
         "left": 0.1619,
         "top": 0.16
       },
       {
         "width": 0.0893,
-        "height": 0.7,
+        "height": 0.68,
         "left": 0.3461,
         "top": 0.16
       },
       {
         "width": 0.1004,
-        "height": 0.7,
+        "height": 0.68,
         "left": 0.4741,
         "top": 0.16
       },
       {
         "width": 0.0938,
-        "height": 0.7,
+        "height": 0.68,
         "left": 0.6139,
         "top": 0.16
       },
       {
         "width": 0.0938,
-        "height": 0.7,
+        "height": 0.68,
         "left": 0.7479,
         "top": 0.16
       },
       {
         "width": 0.1004,
-        "height": 0.7,
-        "left": 0.8818,
+        "height": 0.68,
+        "left": 0.87,
         "top": 0.16
       }
     ]
