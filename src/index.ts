@@ -42,20 +42,20 @@ export class PlateRenderer {
       ctx?.drawImage(img, 0, 0, canvasWidth, canvasHeight)
       clearChild(element)
       element.appendChild(canvas)
+
+      ;[...plateNumber].forEach(async (char, index) => {
+        //单个字符信息
+        const fontInfo = plateInfo.fonts[index]
+        if (!fontInfo) return
+
+        const img = new Image()
+        const charModule = await import(`./assets/font/140_${char}.jpg`)
+        img.src = charModule.default
+        img.onload = () => {
+          plateRenderer.extractFontToCanvas(img, canvas, fontInfo.fontColor || plateInfo.fontColor, canvasWidth * fontInfo.width, canvasHeight * fontInfo.height, canvasWidth * fontInfo.left, canvasHeight * fontInfo.top)
+        }
+      })
     }
-
-    ;[...plateNumber].forEach(async (char, index) => {
-      //单个字符信息
-      const fontInfo = plateInfo.fonts[index]
-      if (!fontInfo) return
-
-      const img = new Image()
-      const charModule = await import(`./assets/font/140_${char}.jpg`)
-      img.src = charModule.default
-      img.onload = () => {
-        plateRenderer.extractFontToCanvas(img, canvas, fontInfo.fontColor || plateInfo.fontColor, canvasWidth * fontInfo.width, canvasHeight * fontInfo.height, canvasWidth * fontInfo.left, canvasHeight * fontInfo.top)
-      }
-    })
   }
 
   extractFontToCanvas(img: HTMLImageElement, targetCanvas: HTMLCanvasElement, fontColor: string, width?: number, height?: number, x?: number, y?: number) {
