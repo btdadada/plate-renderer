@@ -31,5 +31,6 @@ input.addEventListener('input', () => {
   generate()
 });
 
-input.value = '津A888888'
+input.value = '津AF1234挂'
+select.value = 'yellowLarge'
 generate()

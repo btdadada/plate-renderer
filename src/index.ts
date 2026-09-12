@@ -36,7 +36,7 @@ export class PlateRenderer {
     canvas.height = canvasHeight
     const ctx = canvas.getContext('2d')
     const img = new Image()
-    const plateImageModule = await import(`./assets/plate/${plateColor}.png`)
+    const plateImageModule = await import(`./assets/plate/${plateInfo.plateImage}.png`)
     img.src = plateImageModule.default
     img.onload = function() {
       ctx?.drawImage(img, 0, 0, canvasWidth, canvasHeight)
@@ -53,7 +53,7 @@ export class PlateRenderer {
       const charModule = await import(`./assets/font/140_${char}.jpg`)
       img.src = charModule.default
       img.onload = () => {
-        plateRenderer.extractFontToCanvas(img, canvas, plateInfo.fontColor, canvasWidth * fontInfo.width, canvasHeight * fontInfo.height, canvasWidth * fontInfo.left, canvasHeight * fontInfo.top)
+        plateRenderer.extractFontToCanvas(img, canvas, fontInfo.fontColor || plateInfo.fontColor, canvasWidth * fontInfo.width, canvasHeight * fontInfo.height, canvasWidth * fontInfo.left, canvasHeight * fontInfo.top)
       }
     })
   }
