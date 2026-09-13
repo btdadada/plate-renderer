@@ -1,6 +1,6 @@
 {
   "name": "plate-renderer",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "module": "./dist/index.js",
   "main": "./dist/index.js",
@@ -29,5 +29,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/btdadada/plate-renderer"
-  }
+  },
+  "keywords": ["plate", "plate number", "licence plate", "车牌", "车牌生成", "中国车牌", "车牌图片"]
 }
